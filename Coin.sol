@@ -9,7 +9,6 @@ contract Coin is ERC20 {
     uint256 MaxSupply = 1000000 ether; // max token supply  1 000 000
 
     constructor() ERC20("My Coin", "MC") {
-        transferOwnership(msg.sender);
         _mint(msg.sender, MaxSupply); //send 1 000 000 tokens to contract deployer
     }
 }
